@@ -1,0 +1,4 @@
+-Recuerda Instalar Wamp o Xampp
+-una bbdd llamada maquinaria
+-jdk-21 y editar las variables de entorno y el path
+-Exito.
