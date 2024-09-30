@@ -50,7 +50,7 @@ public class UsuarioService implements IUsuarioService{
         usuario.setApellido(nuevo_apellido);
         usuario.setRut(nuevo_rut);
         usuario.setDireccion(nueva_direccion);
-
+        
         this.crearUsuario(usuario);
 
         return usuario;

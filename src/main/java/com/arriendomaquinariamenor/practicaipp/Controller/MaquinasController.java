@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.arriendomaquinariamenor.practicaipp.Model.Maquinas;
+import com.arriendomaquinariamenor.practicaipp.Model.Usuario;
 import com.arriendomaquinariamenor.practicaipp.Service.IMaquinasService;
 
 
@@ -64,8 +65,9 @@ public class MaquinasController {
     public Maquinas editarMaquina(@PathVariable Long id, 
     @RequestParam(required= false, name="nombre") String nuevo_nombre,
      @RequestParam(required= false, name="marca") String nueva_marca,
-     @RequestParam (required= false, name="estado")String nuevo_estado){
-    maquinaservice.editarMaquina(id, nuevo_nombre, nueva_marca, nuevo_estado);
+     @RequestParam (required= false, name="estado")String nuevo_estado,
+     @RequestParam (required= false, name="id_usuario")Usuario nuevo_id_usuario){
+    maquinaservice.editarMaquina(id, nuevo_nombre, nueva_marca, nuevo_estado,nuevo_id_usuario);
     
     Maquinas maquina = maquinaservice.verMaquina(id);
     return maquina;
