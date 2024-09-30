@@ -1,10 +1,16 @@
-// creamos el metodo crearMaquina antes
+// creamos el método crearMaquina
 let crearMaquina = async () => {
     let campos = {}; 
     // Guardamos dentro los elementos por el id del formulario y con .value rescatamos los valores
     campos.nombre = document.getElementById("nombre").value;
     campos.marca = document.getElementById("marca").value;
     campos.estado = document.getElementById("estado").value;
+    
+    // Capturamos el ID del usuario
+    let usuarioId = document.getElementById("usuario").value;
+    if (usuarioId) {
+        campos.id_usuario = { id_usuario: parseInt(usuarioId) }; // Enviamos el ID del usuario como un objeto con la clave "id_usuario"
+    }
 
     try {
         const peticion = await fetch("http://localhost:8080/maquinas/crear", {
@@ -13,7 +19,7 @@ let crearMaquina = async () => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(campos)
+            body: JSON.stringify(campos) // Convertimos el objeto campos a JSON
         });
 
         if (peticion.ok) {
@@ -27,7 +33,7 @@ let crearMaquina = async () => {
     }
 };
 
-// capturamos el botón y le ponemos evento
+// Capturamos el botón y le ponemos evento
 let boton = document.getElementById("boton");
 
 if (boton) {

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tablausuario.css">
+    <title>Tabla Usuario</title>
+</head>
+<body>
+    <table id="tabla">
+        <thead>
+          <tr>
+            <th colspan="6">Usuarios</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Rut</th>
+            <th>Direccion</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Los datos de los usuarios se insertarán aquí -->
+        </tbody>
+      </table>
+      
+      <div id="formulario" style="visibility: hidden;">
+          <div class="titulo"><h1>Modificar Usuario</h1></div>
+          <div class="formbold-main-wrapper">
+              <div class="formbold-form-wrapper">
+                  <form id="usuarioForm">
+                      <div class="formbold-input-flex">
+                          <div>
+                              <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="formbold-form-input" />
+                              <label for="nombre" class="formbold-form-label">Nombre</label>
+                          </div>
+                          <div>
+                              <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="formbold-form-input" />
+                              <label for="apellido" class="formbold-form-label">Apellido</label>
+                          </div>
+                      </div>
+                      <div class="formbold-input-flex">
+                          <div>
+                              <input type="number" name="rut" id="rut" placeholder="Sin guion" class="formbold-form-input" />
+                              <label for="rut" class="formbold-form-label">Rut</label>
+                          </div>
+                          <div>
+                              <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="formbold-form-input" />
+                              <label for="direccion" class="formbold-form-label">Dirección</label>
+                          </div>
+                      </div>
+                      <button id="boton" type="button" class="formbold-btn">Crear / Modificar</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+      <script src="tablausuario.js"></script>
+</body>
+</html>

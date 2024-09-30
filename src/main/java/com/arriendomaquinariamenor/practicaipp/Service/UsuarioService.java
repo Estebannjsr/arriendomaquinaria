@@ -16,10 +16,11 @@ public class UsuarioService implements IUsuarioService{
 
     //Get
     @Override
-    public List<Usuario> verUsuarios(){
-        List<Usuario> usuarios = usuarioRepository.findAll();
-        return usuarios;
+    public List<Usuario> verUsuarios() {
+        return usuarioRepository.findAll();
     }
+        
+    
 
     @Override 
     public Usuario crearUsuario(Usuario usuario){

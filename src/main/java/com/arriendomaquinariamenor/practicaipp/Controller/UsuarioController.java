@@ -29,8 +29,8 @@ public class UsuarioController {
     //Get
     @CrossOrigin("http://127.0.0.1:5500")
     @GetMapping("/usuarios/ver")
-    public List<Usuario> verUsuarios(){
-      return usuarioService.verUsuarios();
+    public List<Usuario> verUsuarios() {
+        return usuarioService.verUsuarios();
     }
 
     @CrossOrigin("http://127.0.0.1:5500")
