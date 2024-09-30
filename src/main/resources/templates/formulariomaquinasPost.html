@@ -15,51 +15,62 @@
         <!-- Author: FormBold Team -->
         <!-- Learn More: https://formbold.com -->
         <div class="formbold-form-wrapper">
-          <form  <form action="/maquinas/crear" method="POST">
-              <div class="formbold-input-flex">
-                <div>
-                    <input
-                    type="text"
-                    name="nombre"
-                    id="nombre"
-                    placeholder="nombre"
-                    class="formbold-form-input"
-                    />
-                    <label for="firstname" class="formbold-form-label"> Nombre </label>
-                </div>
-                <div>
-                    <input
-                    type="text"
-                    name="marca"
-                    id="marca"
-                    placeholder="marca"
-                    class="formbold-form-input"
-                    />
-                    <label for="lastname" class="formbold-form-label"> marca</label>
-                </div>
+          <form action="/maquinas/crear" method="POST">
+            <div class="formbold-input-flex">
+              <div>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="nombre"
+                  class="formbold-form-input"
+                />
+                <label for="nombre" class="formbold-form-label">Nombre</label>
               </div>
-      
-              <div class="formbold-input-flex">
-                <div>
-                    <input
-                    type="text"
-                    name="estado"
-                    id="estado"
-                    placeholder="(Arrendado o No Arrendado)"
-                    class="formbold-form-input"
-                    />
-                    <label for="email" class="formbold-form-label"> Estado</label>
-                </div>
-                
+              <div>
+                <input
+                  type="text"
+                  name="marca"
+                  id="marca"
+                  placeholder="marca"
+                  class="formbold-form-input"
+                />
+                <label for="marca" class="formbold-form-label">Marca</label>
               </div>
-      
-              
-      
-              
-      
+            </div>
+          
+            <div class="formbold-input-flex">
+              <div>
+                <input
+                  type="text"
+                  name="estado"
+                  id="estado"
+                  placeholder="(Arrendado o No Arrendado)"
+                  class="formbold-form-input"
+                />
+                <label for="estado" class="formbold-form-label">Estado</label>
+              </div>
+            </div>
+          
+            <div class="formbold-input-flex">
+              <div>
+                <input
+                  type="number"
+                  name="usuario"
+                  id="usuario"
+                  placeholder="id usuario o no coloques nada"
+                  class="formbold-form-input"
+                />
+                <label for="usuario" class="formbold-form-label">Id Usuario</label>
+              </div>
+            </div>
+          
+            <!-- Botón separado debajo de los campos -->
+            <div class="formbold-button-container">
               <button id="boton" class="formbold-btn">
-                  Crear
+                Crear
               </button>
+            </div>
           </form>
         </div>
       </div>
