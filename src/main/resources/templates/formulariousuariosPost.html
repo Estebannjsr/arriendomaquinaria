@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulariousuariosPostStyle.css">
+    <title>Arriendo Maquinaria Menor</title>
+
+</head>
+<body>
+    <div class="titulo"><h1>Crear Usuario</h1 class="titulo"></div>
+
+    
+    <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+          <form  <form action="/usuarios/crear" method="POST">
+              <div class="formbold-input-flex">
+                <div>
+                    <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    placeholder="nombre"
+                    class="formbold-form-input"
+                    />
+                    <label for="firstname" class="formbold-form-label"> Nombre </label>
+                </div>
+                <div>
+                    <input
+                    type="text"
+                    name="apellido"
+                    id="apellido"
+                    placeholder="apellido"
+                    class="formbold-form-input"
+                    />
+                    <label for="lastname" class="formbold-form-label"> Apellido</label>
+                </div>
+              </div>
+      
+              <div class="formbold-input-flex">
+                <div>
+                    <input
+                    type="number"
+                    name="rut"
+                    id="rut"
+                    placeholder="Sin guion"
+                    class="formbold-form-input"
+                    />
+                    <label for="email" class="formbold-form-label"> Rut</label>
+                </div>
+                <div>
+                    <input
+                    type="text"
+                    name="direccion"
+                    id="direccion"
+                    placeholder="dirección"
+                    class="formbold-form-input"
+                    />
+                    <label for="lastname" class="formbold-form-label"> Direccion</label>
+                </div>
+                
+              </div>
+      
+              
+      
+              
+      
+              <button id="boton" class="formbold-btn">
+                  Crear
+              </button>
+          </form>
+        </div>
+      </div>
+      <script src="formulariousuariosPost.js"></script>
+     
+</body>
+</html>

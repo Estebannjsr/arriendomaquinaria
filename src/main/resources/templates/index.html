@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page con Enlaces</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+        }
+        .background {
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 800px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .link-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .link {
+            background-color: #cec113;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .link:hover, .link:focus {
+            background-color: #a5a349;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            outline: none;
+        }
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Bienvenido a Trasnporte y arriendos jv spa</h1>
+            <p class="description">Selecciona la funcion que deseas realizar</p>
+            <nav class="link-container">
+                <a href="getvermaquinas.html" class="link">Ver Todas Las Maquinas</a>
+                <a href="formulariomaquinasPost.html" class="link">Crear Maquina</a>
+                <a href="tabla.html" class="link">Ver Tabla General</a>
+                <a href="getusuarios.html" class="link">Ver Usuarios</a>
+                <a href="formulariousuariosPost.html" class="link">Crear Usuario</a>
+                <a href="#contacto" class="link">Contacto</a>
+                <a href="#registro" class="link">Registro</a>
+                <a href="#iniciar-sesion" class="link">Iniciar Sesión</a>
+            </nav>
+            <footer class="footer">
+                <p>&copy; 2024 Trasnporte y arriendos jv spa. Todos los derechos reservados.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

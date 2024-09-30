@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Detalles de la Máquina</title>
+</head>
+<body>
+    <div class="titulo"><h1>Detalles de la Máquina</h1></div>
+    <div id="maquina-detalle">
+        <!-- Aquí se llenará la información de la máquina -->
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const maquinaId = urlParams.get('id');
+
+        let verMaquina = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/maquinas/ver/${maquinaId}`);
+                
+                if (response.ok) {
+                    const maquina = await response.json();
+                    const detalleDiv = document.getElementById("maquina-detalle");
+                    detalleDiv.innerHTML = `
+                        <h3>${maquina.nombre}</h3>
+                        <p>Marca: ${maquina.marca}</p>
+                        <p>Estado: ${maquina.estado}</p>
+                    `;
+                } else {
+                    console.error('Error al obtener la máquina');
+                }
+            } catch (error) {
+                console.error('Error de red:', error);
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", verMaquina);
+    </script>
+</body>
+</html>
